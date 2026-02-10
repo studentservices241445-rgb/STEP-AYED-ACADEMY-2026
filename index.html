@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>الدورة المكثفة لاختبار STEP 2026 | أكاديمية عايد</title>
+  <meta name="description" content="موقع رسمي للدورة المكثفة لاختبار STEP 2026 من أكاديمية عايد. خصم يوم التأسيس، مقاعد محدودة، تسجيل سريع وتحويل بنكي مع رسالة تلجرام جاهزة." />
+  <meta name="theme-color" content="#0b0f14" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="الدورة المكثفة لاختبار STEP 2026 | أكاديمية عايد" />
+  <meta property="og:description" content="خصم يوم التأسيس — سجل في الدورة المكثفة وخلّ هدفك 2026 ينضبط." />
+  <meta property="og:type" content="website" />
+
+  <link rel="manifest" href="./assets/manifest.webmanifest">
+  <link rel="icon" href="./assets/icons/icon-32.png">
+  <link rel="apple-touch-icon" href="./assets/icons/icon-180.png">
+
+  <!-- Bootstrap 5.3 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+  <link href="./assets/css/styles.css" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg sticky-top bg-body-tertiary border-bottom">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="./index.html">
+      <img src="./assets/img/logo.webp" alt="شعار أكاديمية عايد" width="36" height="36" style="border-radius:10px;">
+      <div class="lh-1">
+        <div class="fw-bold" id="academyName">أكاديمية عايد الرسمية</div>
+        <small class="text-secondary" id="courseYear">2026</small>
+      </div>
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="القائمة">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="./course.html">محتوى الدورة</a></li>
+        <li class="nav-item"><a class="nav-link" href="./seu-step.html">STEP في السعودية الإلكترونية</a></li>
+        <li class="nav-item"><a class="nav-link" href="./bank-transfer.html">التحويل البنكي</a></li>
+        <li class="nav-item"><a class="nav-link fw-semibold" href="./register.html">التسجيل</a></li>
+      </ul>
+
+      <div class="d-flex gap-2">
+        <button id="shareBtn" class="btn btn-outline-secondary" type="button" title="مشاركة">
+          مشاركة
+        </button>
+        <button id="themeToggle" class="btn btn-outline-secondary" type="button" title="ليلي/نهاري">
+          <span id="themeIcon">☀️</span>
+        </button>
+        <button id="installBtn" class="btn btn-primary d-none" type="button" title="تثبيت كتطبيق">
+          ثبّت التطبيق
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<header class="container my-4">
+  <div class="hero p-4 p-lg-5 text-white">
+    <div class="watermark"></div>
+    <div class="hero-content">
+      <div class="d-flex flex-column flex-lg-row gap-4 align-items-lg-center justify-content-between">
+        <div>
+          <div class="d-inline-flex align-items-center gap-2 badge-soft rounded-pill px-3 py-2 mb-3">
+            <span class="fw-semibold">🎉 يوم التأسيس</span>
+            <span class="opacity-75">خصم خاص لمدة محدودة</span>
+          </div>
+
+          <h1 class="display-6 fw-bold mb-2" id="courseName">الدورة المكثفة لاختبار STEP 2026</h1>
+          <p class="lead mb-0 lh-wide">
+            إذا تبغى تدخل اختبار STEP وأنت واثق — هذا مكانك. ترتيب، خطة، نماذج، ومتابعة…
+            والهدف واضح: <b>نرفع درجتك</b> ونجهزك لاختبارك 2026.
+          </p>
+
+          <div class="mt-3 d-flex flex-wrap gap-2">
+            <span class="badge bg-light text-dark">✅ مناسب لطلاب الجامعة السعودية الإلكترونية</span>
+            <span class="badge bg-light text-dark">✅ نماذج + تدريب مكثف</span>
+            <span class="badge bg-light text-dark">✅ رسالة تلجرام جاهزة للتأكيد</span>
+          </div>
+        </div>
+
+        <div class="bg-black bg-opacity-50 rounded-4 p-4" style="min-width: min(420px, 100%);">
+          <div class="d-flex justify-content-between align-items-center">
+            <div>
+              <div class="small opacity-75">المتبقي على انتهاء الخصم</div>
+              <div class="timer fs-3 fw-bold" id="discountTimer">—</div>
+            </div>
+            <div class="text-end">
+              <div class="small opacity-75">السعر</div>
+              <div class="price-old" id="priceOld">—</div>
+              <div class="price-now" id="priceNow">—</div>
+            </div>
+          </div>
+          <hr class="border-light border-opacity-25">
+          <div class="d-flex justify-content-between align-items-center">
+            <div>
+              <div class="small opacity-75">المقاعد المتاحة</div>
+              <div class="fs-2 fw-bold"><span id="seatsCount">—</span> <span class="fs-6 opacity-75">مقعد</span></div>
+            </div>
+            <div style="width: 46%;">
+              <div class="progress" role="progressbar" aria-label="المقاعد" style="height: 10px;">
+                <div class="progress-bar" id="seatsBar" style="width: 50%"></div>
+              </div>
+              <div class="small opacity-75 mt-2">إذا خلصت… نفتح دفعة إضافية 👌</div>
+            </div>
+          </div>
+
+          <div class="d-grid gap-2 mt-3">
+            <a href="./register.html" class="btn btn-warning btn-lg fw-bold">سجّل الآن</a>
+            <a href="./bank-transfer.html" class="btn btn-outline-light">أبي بيانات التحويل البنكي</a>
+          </div>
+
+          <div id="iosInstallHint" class="d-none mt-3 small opacity-75">
+            على الآيفون: اضغط مشاركة (Share) → <b>Add to Home Screen</b>.
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-4 p-3 rounded-4 badge-soft">
+        <div class="fw-semibold" id="discountBadge">خصم يوم التأسيس: —</div>
+        <div class="small opacity-75 mt-1">السعر يرجع للسعر القديم بعد انتهاء المؤقت حسب العرض.</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="container pb-5 mb-5">
+  <section class="row g-3 g-lg-4">
+    <div class="col-lg-4">
+      <div class="card card-soft h-100">
+        <div class="card-body">
+          <h3 class="h5 fw-bold">تجهيز ذكي — مو عشوائي</h3>
+          <p class="mb-0 text-secondary lh-wide">نشتغل على نقاط رفع الدرجة: القواعد + مفردات + قراءة + استماع + تحليل كتابي، مع نماذج وتقييم مستمر.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="card card-soft h-100">
+        <div class="card-body">
+          <h3 class="h5 fw-bold">للطلاب اللي وقتهم ضيق</h3>
+          <p class="mb-0 text-secondary lh-wide">حتى لو باقي أسبوعين أو أقل… بنمشي بخطة مكثفة واضحة وتعرف وش تسوي كل يوم.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="card card-soft h-100">
+        <div class="card-body">
+          <h3 class="h5 fw-bold">تأكيد اشتراك سريع</h3>
+          <p class="mb-0 text-secondary lh-wide">بعد ما تكمّل النموذج، زر واحد يفتح لك تلجرام برسالة جاهزة فيها كل بياناتك + خطتك + اسم الإيصال.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mt-5">
+    <div class="d-flex flex-column flex-lg-row align-items-lg-center justify-content-between gap-3">
+      <div>
+        <h2 class="h4 fw-bold">محتوى الدورة — مرتب وعملي</h2>
+        <p class="text-secondary lh-wide mb-0">بدال ما تذاكر من 20 مصدر وتضيع… جمعنا لك المحتوى بالترتيب اللي يخدمك في الاختبار.</p>
+      </div>
+      <a class="btn btn-outline-primary" href="./course.html">شوف الفهرس كامل</a>
+    </div>
+
+    <div class="row g-3 mt-2">
+      <div class="col-md-6">
+        <div class="p-3 p-lg-4 form-section">
+          <div class="fw-bold mb-1">✅ الأساسيات اللي تفرق</div>
+          <ul class="text-secondary mb-0 lh-wide">
+            <li>Grammar & Structure بطريقة مختصرة + أمثلة كثير</li>
+            <li>Vocabulary (context + synonyms + academic words)</li>
+            <li>Reading strategies (skimming/scanning) + passages</li>
+            <li>Listening routines + أسئلة متوقعة</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="p-3 p-lg-4 form-section">
+          <div class="fw-bold mb-1">🔥 نماذج وتحليل</div>
+          <ul class="text-secondary mb-0 lh-wide">
+            <li>نماذج محاكاة على نمط STEP</li>
+            <li>تحليل أخطاء + نقاط تحسين</li>
+            <li>مراجعة نهائية (Revision) قبل الاختبار</li>
+            <li>خطة مذاكرة تولد تلقائيًا لو ما تعرف أضعف قسم عندك</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mt-5" id="seu">
+    <div class="card card-soft">
+      <div class="card-body p-4 p-lg-5">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-8">
+            <h2 class="h4 fw-bold">طلاب الجامعة السعودية الإلكترونية (SEU) — هذا مهم لك</h2>
+            <p class="text-secondary lh-wide mb-0">
+              كثير من طلاب SEU يتفاجؤون إن STEP داخل في معادلة/قياس الإنجليزية للسنة الأولى المشتركة…
+              سوّينا صفحة كاملة نشرح فيها المتطلبات والأرقام والخطوات الرسمية.
+            </p>
+          </div>
+          <div class="col-lg-4 text-lg-end">
+            <a class="btn btn-primary" href="./seu-step.html">افتح صفحة STEP في SEU</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mt-5" id="testimonials">
+    <div class="d-flex justify-content-between align-items-center">
+      <h2 class="h4 fw-bold mb-0">آراء وتجارب</h2>
+      <span class="badge rounded-pill text-bg-success">⭐ 4.9/5</span>
+    </div>
+    <div class="row g-3 mt-2">
+      <div class="col-md-4">
+        <div class="card card-soft h-100">
+          <div class="card-body">
+            <div class="fw-bold">سارة (SEU)</div>
+            <div class="small text-secondary">"كنت ضايعة بين مصادر… الدورة رتبتني وخففت توتري"</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card card-soft h-100">
+          <div class="card-body">
+            <div class="fw-bold">فيصل</div>
+            <div class="small text-secondary">"أكثر شي فرق معي تحليل الأخطاء والنماذج"</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card card-soft h-100">
+          <div class="card-body">
+            <div class="fw-bold">نوره</div>
+            <div class="small text-secondary">"خطة المذاكرة اللي طلعت لي كانت واقعية، وكنت أعرف وش أسوي كل يوم"</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="small text-secondary mt-2 mb-0">ملاحظة: هذي آراء مكتوبة بصياغة عامة لأغراض عرض شكل الموقع، وتقدر تستبدلها بقصص نجاح موثقة عندكم.</p>
+  </section>
+
+  <section class="mt-5" id="shareSection">
+    <h2 class="h4 fw-bold">صيغ مشاركة يوم التأسيس</h2>
+    <p class="text-secondary lh-wide">انسخ الصيغة اللي تناسبك وشاركها مع زملاءك — تساعدهم ويسجلون معك 👌</p>
+
+    <div class="row g-3">
+      <div class="col-lg-4">
+        <div class="form-section p-3">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <div class="fw-semibold">X (تويتر)</div>
+            <button class="btn btn-sm btn-outline-primary" type="button" data-copy-for="shareX">نسخ</button>
+          </div>
+          <textarea id="shareX" class="form-control" rows="5" readonly></textarea>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="form-section p-3">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <div class="fw-semibold">WhatsApp</div>
+            <button class="btn btn-sm btn-outline-primary" type="button" data-copy-for="shareWhatsApp">نسخ</button>
+          </div>
+          <textarea id="shareWhatsApp" class="form-control" rows="5" readonly></textarea>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="form-section p-3">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <div class="fw-semibold">Telegram</div>
+            <button class="btn btn-sm btn-outline-primary" type="button" data-copy-for="shareTelegram">نسخ</button>
+          </div>
+          <textarea id="shareTelegram" class="form-control" rows="5" readonly></textarea>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mt-5">
+    <div class="form-section p-4">
+      <div class="d-flex flex-column flex-lg-row gap-3 justify-content-between align-items-lg-center">
+        <div>
+          <div class="fw-bold">🚨 قروب التنبيهات الرسمي لأكاديمية عايد</div>
+          <div class="text-secondary">تحديثات المحتوى • عروض وخصومات • مواعيد وخطط مذاكرة</div>
+          <div class="mt-2"><a id="groupLink" href="#" target="_blank" rel="noopener">—</a></div>
+        </div>
+        <div class="text-lg-end">
+          <div class="small text-secondary">للاستفسار والاشتراك</div>
+          <div class="fw-bold" id="telegramUser">@Ayed_Academy_2026</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Sticky CTA -->
+<div class="sticky-cta">
+  <div class="container py-2 d-flex align-items-center justify-content-between gap-2">
+    <div>
+      <div class="small text-secondary">الآن</div>
+      <div class="fw-bold" id="priceNow">—</div>
+    </div>
+    <a href="./register.html" class="btn btn-warning fw-bold">اشترك الآن</a>
+  </div>
+</div>
+
+<!-- Floating assistant -->
+<button id="assistantFab" class="btn btn-primary assistant-fab" type="button" aria-label="مساعد أكاديمية عايد">
+  💬
+</button>
+
+<div id="assistantPanel" class="assistant-panel bg-body">
+  <div class="d-flex align-items-center justify-content-between p-2 border-bottom">
+    <div class="fw-semibold">مساعد أكاديمية عايد</div>
+    <div class="d-flex gap-2">
+      <button id="assistantShare" class="btn btn-sm btn-outline-secondary" type="button">صيغ مشاركة</button>
+      <button id="assistantClose" class="btn btn-sm btn-outline-secondary" type="button">إغلاق</button>
+    </div>
+  </div>
+  <div id="assistantMessages" class="assistant-messages"></div>
+  <div id="assistantQuick" class="assistant-quick"></div>
+</div>
+
+<!-- Toast -->
+<div class="toast-container position-fixed bottom-0 start-0 p-3" style="z-index: 2000;">
+  <div id="liveToast" class="toast" role="alert" aria-live="polite" aria-atomic="true">
+    <div class="d-flex">
+      <div id="liveToastBody" class="toast-body">...</div>
+      <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+  </div>
+</div>
+
+<!-- Scripts -->
+<script src="./assets/js/config.js"></script>
+<script type="module" src="./assets/js/app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
